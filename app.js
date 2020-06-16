@@ -9,18 +9,25 @@ var seattle = {
     minCust: 23,
     maxCust: 65,
     avgCookSale: 6.3,
-    getCookiesArray: function (min,max,avg) {
+    getCookiesArray: function () {
+        var sum=0;
         var cookiesArray = new Array(16);
         //var cookiesArray = [];
-        for (var j = 0; j < 16; j++) {
+        for (var j = 0; j < 17; j++) {
+            var value;
             if (j > 11) {
-                cookiesArray[j] = j - 11 + 'pm: ' + Math.floor((this.avgCookSale * getRandomNumber(this.minCust, this.maxCust)));
-
+                value=Math.floor((this.avgCookSale * getRandomNumber(this.minCust, this.maxCust)));
+                cookiesArray[j] = j - 11 + 'pm: ' + value;
+                sum+=value;
             } else {
-                cookiesArray[j] = j + 1 + 'am: ' + Math.floor((this.avgCookSale * getRandomNumber(this.minCust, this.maxCust)));
+                value=Math.floor((this.avgCookSale * getRandomNumber(this.minCust, this.maxCust)));
+                cookiesArray[j] = j + 1 + 'am: ' + value;
+                sum+=value;
             }
+            cookiesArray[16]='Total: '+sum;
         }
         console.table('cookiesArray', cookiesArray);
+        cookiesArray[16]=sum;
         return cookiesArray;
     }
 };
@@ -34,17 +41,24 @@ var tokyo = {
     avgCookSale: 1.2,
     //randomCustomerAvg: getRandomNumber(23, 65),
     getCookiesArray: function () {
+        var sum=0;
         var cookiesArray = new Array(16);
         //var cookiesArray = [];
-        for (var j = 0; j < 16; j++) {
+        for (var j = 0; j < 17; j++) {
+            var value;
             if (j > 11) {
-                cookiesArray[j] = j - 11 + 'pm: ' + Math.floor((this.avgCookSale * getRandomNumber(this.minCust, this.maxCust)));
-
+                value=Math.floor((this.avgCookSale * getRandomNumber(this.minCust, this.maxCust)));
+                cookiesArray[j] = j - 11 + 'pm: ' + value;
+                sum+=value;
             } else {
-                cookiesArray[j] = j + 1 + 'am: ' + Math.floor((this.avgCookSale * getRandomNumber(this.minCust, this.maxCust))); 
+                value=Math.floor((this.avgCookSale * getRandomNumber(this.minCust, this.maxCust)));
+                cookiesArray[j] = j + 1 + 'am: ' + value;
+                sum+=value;
             }
+            cookiesArray[16]='Total: '+sum;
         }
         console.table('cookiesArray', cookiesArray);
+        cookiesArray[16]=sum;
         return cookiesArray;
     }
 };
@@ -56,17 +70,24 @@ var dubai = {
     maxCust: 38,
     avgCookSale: 3.7,
     getCookiesArray: function () {
+        var sum=0;
         var cookiesArray = new Array(16);
         //var cookiesArray = [];
-        for (var j = 0; j < 16; j++) {
+        for (var j = 0; j < 17; j++) {
+            var value;
             if (j > 11) {
-                cookiesArray[j] = j - 11 + 'pm: ' + Math.floor((this.avgCookSale * getRandomNumber(this.minCust, this.maxCust)));
-
+                value=Math.floor((this.avgCookSale * getRandomNumber(this.minCust, this.maxCust)));
+                cookiesArray[j] = j - 11 + 'pm: ' + value;
+                sum+=value;
             } else {
-                cookiesArray[j] = j + 1 + 'am: ' + Math.floor((this.avgCookSale * getRandomNumber(this.minCust, this.maxCust)));
+                value=Math.floor((this.avgCookSale * getRandomNumber(this.minCust, this.maxCust)));
+                cookiesArray[j] = j + 1 + 'am: ' + value;
+                sum+=value;
             }
+            cookiesArray[16]='Total: '+sum;
         }
         console.table('cookiesArray', cookiesArray);
+        cookiesArray[16]=sum;
         return cookiesArray;
     }
 };
@@ -78,17 +99,24 @@ var paris = {
     maxCust: 38,
     avgCookSale: 2.3,
     getCookiesArray: function () {
+        var sum=0;
         var cookiesArray = new Array(16);
         //var cookiesArray = [];
-        for (var j = 0; j < 16; j++) {
+        for (var j = 0; j < 17; j++) {
+            var value;
             if (j > 11) {
-                cookiesArray[j] = j - 11 + 'pm: ' + Math.floor((this.avgCookSale * getRandomNumber(this.minCust, this.maxCust)));
-
+                value=Math.floor((this.avgCookSale * getRandomNumber(this.minCust, this.maxCust)));
+                cookiesArray[j] = j - 11 + 'pm: ' + value;
+                sum+=value;
             } else {
-                cookiesArray[j] = j + 1 + 'am: ' + Math.floor((this.avgCookSale * getRandomNumber(this.minCust, this.maxCust)));
+                value=Math.floor((this.avgCookSale * getRandomNumber(this.minCust, this.maxCust)));
+                cookiesArray[j] = j + 1 + 'am: ' + value;
+                sum+=value;
             }
+            cookiesArray[16]='Total: '+sum;
         }
         console.table('cookiesArray', cookiesArray);
+        cookiesArray[16]=sum;
         return cookiesArray;
     }
 };
@@ -101,17 +129,24 @@ var lima = {
     maxCust: 16,
     avgCookSale: 4.6,
     getCookiesArray: function () {
+        var sum=0;
         var cookiesArray = new Array(16);
         //var cookiesArray = [];
-        for (var j = 0; j < 16; j++) {
+        for (var j = 0; j < 17; j++) {
+            var value;
             if (j > 11) {
-                cookiesArray[j] = j - 11 + 'pm: ' + Math.floor((this.avgCookSale * getRandomNumber(this.minCust, this.maxCust)));
-
+                value=Math.floor((this.avgCookSale * getRandomNumber(this.minCust, this.maxCust)));
+                cookiesArray[j] = j - 11 + 'pm: ' + value;
+                sum+=value;
             } else {
-                cookiesArray[j] = j + 1 + 'am: ' + Math.floor((this.avgCookSale * getRandomNumber(this.minCust, this.maxCust)));
+                value=Math.floor((this.avgCookSale * getRandomNumber(this.minCust, this.maxCust)));
+                cookiesArray[j] = j + 1 + 'am: ' + value;
+                sum+=value;
             }
+            cookiesArray[16]=sum;
         }
         console.table('cookiesArray', cookiesArray);
+        cookiesArray[16]='Total: '+sum;
         return cookiesArray;
     }
 };
@@ -140,7 +175,7 @@ var main = document.createElement("main");               // Create a <p> element
 document.body.appendChild(main);
 
 var branchNames = ['seattle', 'tokyo', 'dubai', 'paris', 'lima'];
-
+//var sum=0;
 for (var j = 0; j < publicCookiesArray.length; j++) {
     var branchTitle = document.createElement('h2');
     branchTitle.textContent = branchNames[j];
@@ -148,9 +183,14 @@ for (var j = 0; j < publicCookiesArray.length; j++) {
     main.appendChild(branchTitle);
     main.appendChild(branchUl);
 
-    for (var x = 0; x < 16; x++) {
+    for (var x = 0; x < 17; x++) {
         var cookiesList = document.createElement('li');
         cookiesList.textContent = publicCookiesArray[j][x];
+        //sum+=publicCookiesArray[j][x];
         branchUl.appendChild(cookiesList);
     }
+    // var sumItem = document.createElement('li');
+    // sumItem.textContent = sum;
+    //     branchUl.appendChild(sumItem);
+
 }
