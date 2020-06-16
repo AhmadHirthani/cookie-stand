@@ -154,5 +154,3 @@ for (var j = 0; j < publicCookiesArray.length; j++) {
         branchUl.appendChild(cookiesList);
     }
 }
-
-
