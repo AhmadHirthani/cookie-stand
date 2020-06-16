@@ -14,12 +14,15 @@ function Branch(branchName, minCust, maxCust, avgCookSale) {
     this.maxCust = maxCust;
     this.avgCookSale = avgCookSale;
     this.totalCookies = 0;
+    this.totalCookiesPerDay = 0;
+
     this.stafCountArray = [];
     this.cookiesList = [];
     this.getCookiesArray = function () {
         for (var j = 0; j < 16; j++) {
             this.cookiesList[j] = Math.floor(this.avgCookSale * getRandomNumber(this.minCust, this.maxCust));
             this.totalCookies = this.totalCookies + this.cookiesList[j];
+            this.totalCookiesPerDay+=this.cookiesList[j];
             this.stafCountArray[j] = Math.ceil(this.cookiesList[j] / 20);
         }
     };
@@ -36,6 +39,9 @@ var tokyo = new Branch('Tokyo', 3, 24, 1.2);
 var dubai = new Branch('Dubai', 11, 38, 3.7);
 var paris = new Branch('Paris', 20, 38, 2.3);
 var lima = new Branch('Lima', 2, 16, 4.6);
+console.log('seattle: '+seattle);
+console.log('Total per day for seattle: '+seattle.totalCookiesPerDay);
+
 
 var main = document.createElement("main");
 document.body.appendChild(main);
@@ -64,12 +70,22 @@ for (var i = 1; i < 17; i++) {
     headerTr.appendChild(headerTd);
 }
 
+var cornerTotalTd = document.createElement('td');
+cornerTotalTd.textContent='Totals';
+headerTr.appendChild(cornerTotalTd);
+
+
+
 console.log(seattle);
 
 
 //loop on branhes's array to create the body of the table
 branches.forEach(myFunction);
 function myFunction(item, index) {
+    var totalCookiesPerDay=0;
+    for(var i=0;i<item.cookiesList.length;i++){
+        totalCookiesPerDay+=item.cookiesList[i];
+    }
     //console.log('index: '+index+ ' item: '+ item.stafCountArray);
     //document.getElementById("demo").innerHTML += index + ":" + item + "<br>"; 
     var tr = document.createElement('tr');
@@ -85,6 +101,11 @@ function myFunction(item, index) {
         tr.appendChild(td);
         sumsArray[x] += item.cookiesList[x];
     }
+
+    var totalTd = document.createElement('td');
+    totalTd.textContent = totalCookiesPerDay;
+        tr.appendChild(totalTd);
+    totalCookiesPerDay
 }
 
 //create the footer of the table
@@ -93,11 +114,18 @@ table.appendChild(footerTr);
 var totalTd = document.createElement('td');
 totalTd.textContent = 'Totals';
 footerTr.appendChild(totalTd);
+var totalSum=0;
 for (var i = 0; i < sumsArray.length; i++) {
     var headerTd = document.createElement('td');
     headerTd.textContent = sumsArray[i];
+    totalSum+=sumsArray[i];
     footerTr.appendChild(headerTd);
 }
+
+var totalSumTd = document.createElement('td');
+totalSumTd.textContent = totalSum;
+footerTr.appendChild(totalSumTd);
+
 
 var para=document.getElementById('para');
 para.textContent="fffff";
