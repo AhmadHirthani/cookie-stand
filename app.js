@@ -98,7 +98,66 @@ for (var i = 0; i < sumsArray.length; i++) {
     headerTd.textContent = sumsArray[i];
     footerTr.appendChild(headerTd);
 }
-var staffHeader = document.createElement('h2');
+
+var para=document.getElementById('para');
+para.textContent="fffff";
+
+var table1 = document.createElement("table");
+para.appendChild(table1);
+
+var headerTr1 = document.createElement('tr');
+table1.appendChild(headerTr1);
+
+var cornerTd1 = document.createElement('td');
+headerTr1.appendChild(cornerTd1);
+
+//create table's header automatically
+// for (var i = 1; i < 17; i++) {
+//    var headerTd1 = document.createElement('td');
+//    if (i > 12) {
+//        headerTd1.textContent = i - 12 + 'pm ';
+//    } else {
+//        headerTd1.textContent = i + 'am ';
+//    }
+//    headerTr1.appendChild(headerTd1);
+// }
+
+// console.log(seattle);
+
+
+// //loop on branhes's array to create the body of the table
+// branches.forEach(myFunction);
+// function myFunction(item, index) {
+//    //console.log('index: '+index+ ' item: '+ item.stafCountArray);
+//    //document.getElementById("demo").innerHTML += index + ":" + item + "<br>"; 
+//    var tr1 = document.createElement('tr');
+//    table1.appendChild(tr1);
+//    var td1 = document.createElement('td');
+//    td1.textContent = item.branchName;
+//    tr1.append(td1);
+
+
+//    for (var x = 0; x < item.cookiesList.length; x++) {
+//        var td1 = document.createElement('td');
+//        td1.textContent = item.stafCountArray[x];
+//        tr1.appendChild(td1);
+//        sumsStaffArray[x] += item.stafCountArray[x];
+//    }
+// }
+
+// //create the footer of the table
+// var footerTr1 = document.createElement('tr');
+// table1.appendChild(footerTr1);
+// var totalTd1 = document.createElement('td');
+// totalTd1.textContent = 'Totals';
+// footerTr1.appendChild(totalTd1);
+// for (var i = 0; i < sumsStaffArray.length; i++) {
+//    var headerTd1 = document.createElement('td');
+//    headerTd1.textContent = sumsStaffArray[i];
+//    footerTr1.appendChild(headerTd1);
+// }
+
+
 
 
 
