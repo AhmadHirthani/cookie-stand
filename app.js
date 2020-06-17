@@ -39,19 +39,26 @@ Branch.prototype.renderFn = function () {
     //     this.totalCookiesPerDay += this.cookiesList[i];
     // }
     var tr = document.createElement('tr');
+    //tr.style.backgroundColor='blue';
     var objectTable=document.getElementById('slaesTable');
 
     objectTable.appendChild(tr);
     var tdd = document.createElement('td');
+    tdd.style.border='solid';
+
     tdd.textContent = this.branchName;
     tr.appendChild(tdd);
     for (var x = 0; x < this.cookiesList.length; x++) {
         var td = document.createElement('td');
+        td.style.border='solid';
+
         td.textContent = this.cookiesList[x];
         tr.appendChild(td);
         sumsArray[x] += this.cookiesList[x];
     }
     var totalTd = document.createElement('td');
+    totalTd.style.border='solid';
+
     totalTd.textContent = this.totalCookiesPerDay;
     tr.appendChild(totalTd);
 
@@ -67,7 +74,12 @@ var main = document.createElement("main");
 document.body.appendChild(main);
 
 var salesHeader = document.createElement('h2');
-salesHeader.textContent = 'Sales';
+salesHeader.textContent = 'Sales table';
+salesHeader.style.marginTop='90px';
+salesHeader.style.position='relative';
+
+
+
 main.append(salesHeader);
 
 main.appendChild(table);
@@ -87,19 +99,29 @@ createTableFooter();
 function createTableFooter(){
 //create the footer of the table
 var footerTr = document.createElement('tr');
+footerTr.style.fontWeight='bold';
+footerTr.style.backgroundColor='#1c6ae8';
+
+
 table.appendChild(footerTr);
 var totalTd = document.createElement('td');
+totalTd.style.border='double';
+
 totalTd.textContent = 'Totals';
 footerTr.appendChild(totalTd);
 var totalSum = 0;
 for (var i = 0; i < sumsArray.length; i++) {
     var headerTd = document.createElement('td');
+    headerTd.style.border='double';
+
     headerTd.textContent = sumsArray[i];
     totalSum += sumsArray[i];
     footerTr.appendChild(headerTd);
 }
 
 var totalSumTd = document.createElement('td');
+totalSumTd.style.border='double';
+
 totalSumTd.textContent = totalSum;
 footerTr.appendChild(totalSumTd);
 var para = document.getElementById('para');
@@ -114,13 +136,19 @@ headerTr1.appendChild(cornerTd1);
 function createTableHeader() {
     //var table=document.getElementById('slaesTable');
     var headerTr = document.createElement('tr');
-    headerTr.setAttribute('id', 'headerTr')
+    headerTr.setAttribute('id', 'headerTr');
+    headerTr.style.fontWeight='bold';
+    headerTr.style.backgroundColor='#1d417a';
+
     table.appendChild(headerTr);
 
     var cornerTd = document.createElement('td');
     headerTr.appendChild(cornerTd);
+    cornerTd.style.border='double';
     for (var i = 6; i < 22; i++) {
         var headerTd = document.createElement('td');
+        headerTd.style.border='double';
+
         if (i > 12) {
             headerTd.textContent = i - 12 + 'pm ';
         } else {
@@ -129,6 +157,7 @@ function createTableHeader() {
         headerTr.appendChild(headerTd);
     }
     var cornerTotalTd = document.createElement('td');
+    cornerTotalTd.style.border='double';
     cornerTotalTd.textContent = 'Daily Location Total';
     headerTr.appendChild(cornerTotalTd);
 }
