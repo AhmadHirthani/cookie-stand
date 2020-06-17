@@ -1,118 +1,485 @@
-footer p{
-  position: absolute;
-bottom: 5px;
-left:45%;
-
+body {
+  width: 100%;
+  background-image: url("assets/family.jpg");
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: lighten;
+  background-size: 99%;
 }
-tr{
-  background-color: #0cb0f1;
 
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  border-bottom: 4px solid #ffffff;
+  border-color: darkorange;
+  opacity: 0.7;
+  background-color: blueviolet;
 }
- tr.even {
-   background-color: #7ed3f5;
- }
+
+main {
+  position: relative;
+  top: 100px;
+  left: 0px;
+  height: 1000px;
+  width: 100%;
+}
+
+form {
+  background-color: #730d3d;
+  width: 30%;
+  position: relative;
+  top: 100px;
+  left: 33%;
+  font-size: larger;
+  border-radius: 10px;
+  
+}
+fieldset{
+  border: 0px;
+}
 
 
+table {
 
- table {
   letter-spacing: 0.05em;
+  position: relative;
+  top: 10px;
+  left: 1%;
+  text-align: center;
+  font-size: 120%;
+}
 
-   position: relative;
-   top: 50px;
-   left: 12px;
-   text-align: center;
-   font-size: 120%;
- }
- table.main{
+
+#footerPara {
+  background-color: darksalmon;
+  position: fixed;
+  bottom: -16px;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  padding: 10px;
+}
+
+tr {
+  background-color: #0cb0f1;
+}
+
+tr.even {
+  background-color: #7ed3f5;
+}
+
+table.main {
   width: 40%;
   left: 27%;
+}
+
+td {
+  padding: 5px;
+  margin: 5px;
+  border: solid;
+}
+
+#imageSection {
+  padding-top: 100px;
+  padding-left: 5%;
+  float: left;
+  align-items: center;
+}
+
+img {
+  border-radius: 30px;
+  border-style: solid;
+  border-color: darkgoldenrod;
+  float: left;
+  width: 300px;
+  height: 300px;
+  margin: 40px;
+}
+
+a {
+  color: rgb(0, 0, 0);
+  font-style: normal;
+  font-weight: bold;
+}
+
+li h2 {
+  width: 20px;
+}
+
+li {
+  display: inline-block;
+  margin: 0px 10px;
+  font-size: x-large;
+  font-weight: bold;
+  height: 35px;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bolder;
+  color: rgb(255, 0, 0);
+  padding: 0mm;
+  margin: 0mm;
+}
+
+h2 {
+  text-align: center;
+  color: rgb(255, 0, 0);
+  padding: 0mm;
+  margin: 0mm;
+}
+
+footer p {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+/**** Buttons ****/
+
+input.button_text {
+  overflow: visible;
+  padding: 5px;
+  width: auto;
+  position: relative;
+  left: 42%;
+  font-size: 20px;
+
+  color: white;
+  background-color: #faab3c;
+}
 
 
 
- }
+/**** Inputs and Labels ****/
 
- td {
-   padding: 5px;
-   margin: 5px;
-   border: solid;
- }
+label.description {
+  border: none;
+  color: white;
+  display: block;
+  font-size: 100%;
+  font-weight: 700;
+  line-height: 150%;
+  padding: 0 0 1px;
+}
 
- #imageSection {
-   padding-top: 100px;
-   padding-left: 5%;
-   float: left;
-   align-items: center;
- }
 
- img {
-   border-radius: 30px;
-   border-style: solid;
-   border-color: darkgoldenrod;
-   float: left;
-   width: 300px;
-   height: 300px;
-   margin: 40px;
- }
 
- a {
-   color: rgb(0, 0, 0);
-   font-style: normal;
-   font-weight: bold;
- }
+form li.highlighted {
+  background-color: #fff7c0;
+}
 
- footer p {
-   text-align: center;
- }
+form .guidelines {
+  background: #f5f5f5;
+  border: 1px solid #e6e6e6;
+  color: #444;
+  font-size: 80%;
+  left: 100%;
+  line-height: 130%;
+  margin: 0 0 0 8px;
+  padding: 8px 10px 9px;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  width: 42%;
+  z-index: 1000;
+}
 
- body {
-   width: 100%;
-   background-image: url("assets/family.jpg");
-   background-color: rgba(255, 255, 255, 0.5);
-   background-blend-mode: lighten;
-   background-size: 99%;
- }
+form .guidelines small {
+  font-size: 105%;
+}
 
- nav {
-   position: fixed;
-   left: 0;
-   top: 0;
-   height: 60px;
-   width: 100%;
-   border-bottom: 4px solid #ffffff;
-   border-color: darkorange;
-   opacity: 0.7;
-   background-color: blueviolet;
- }
+form li.highlighted .guidelines {
+  visibility: visible;
+}
 
- li h2 {
-   width: 20px;
- }
+form li:hover .guidelines {
+  visibility: visible;
+}
 
- li {
-   display: inline-block;
-   margin: 0px 10px;
-   font-size: x-large;
-   font-weight: bold;
-   height: 35px;
-   text-align: center;
- }
+.no_guidelines .guidelines {
+  display: none !important;
+}
 
- h1 {
-   text-align: center;
-   font-weight: bolder;
-   color: rgb(255, 0, 0);
-   padding: 0mm;
-   margin: 0mm;
- }
+.no_guidelines form li {
+  width: 97%;
+}
 
- h2 {
-   text-align: center;
-   color: rgb(255, 0, 0);
-   padding: 0mm;
-   margin: 0mm;
- }
+.no_guidelines li.section {
+  padding-left: 9px;
+}
 
- footer p {
-   color: black;
-   font-weight: bold;
- }
+/*** Success Message ****/
+
+.form_success {
+  clear: both;
+  margin: 0;
+  padding: 90px 0pt 100px;
+  text-align: center
+}
+
+.form_success h2 {
+  clear: left;
+  font-size: 160%;
+  font-weight: normal;
+  margin: 0pt 0pt 3px;
+}
+
+/*** Password ****/
+
+ul.password {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.password h2 {
+  color: #DF0000;
+  font-weight: bold;
+  margin: 0pt auto 10px;
+}
+
+.password input.text {
+  font-size: 170% !important;
+  width: 380px;
+  text-align: center;
+}
+
+.password label {
+  display: block;
+  font-size: 120% !important;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+#li_captcha {
+  padding-left: 5px;
+}
+
+#li_captcha span {
+  float: none;
+}
+
+/** Embedded Form **/
+
+.embed #form_container {
+  border: none;
+}
+
+.embed #top, .embed #bottom, .embed h1 {
+  display: none;
+}
+
+.embed #form_container {
+  width: 100%;
+}
+
+.embed #footer {
+  text-align: left;
+  padding-left: 10px;
+  width: 99%;
+}
+
+.embed #footer.success {
+  text-align: center;
+}
+
+.embed form.appnitro {
+  margin: 0px 0px 0;
+}
+
+.calendar table {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  font-size: 11px;
+  color: #000;
+  background: #fff;
+  font-family: "Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+}
+
+.calendar .button {
+  text-align: center;
+  padding: 2px;
+}
+
+.calendar .nav {
+  background: #f5f5f5;
+}
+
+.calendar thead .title {
+  font-weight: bold;
+  text-align: center;
+  background: #dedede;
+  color: #000;
+  padding: 2px 0 3px 0;
+}
+
+.calendar thead .headrow {
+  background: #f5f5f5;
+  color: #444;
+  font-weight: bold;
+}
+
+.calendar thead .daynames {
+  background: #fff;
+  color: #333;
+  font-weight: bold;
+}
+
+.calendar thead .name {
+  border-bottom: 1px dotted #ccc;
+  padding: 2px;
+  text-align: center;
+  color: #000;
+}
+
+.calendar thead .weekend {
+  color: #666;
+}
+
+.calendar thead .hilite {
+  background-color: #444;
+  color: #fff;
+  padding: 1px;
+}
+
+.calendar thead .active {
+  background-color: #d12f19;
+  color: #fff;
+  padding: 2px 0px 0px 2px;
+}
+
+.calendar tbody .day {
+  width: 1.8em;
+  color: #222;
+  text-align: right;
+  padding: 2px 2px 2px 2px;
+}
+
+.calendar tbody .day.othermonth {
+  font-size: 80%;
+  color: #bbb;
+}
+
+.calendar tbody .day.othermonth.oweekend {
+  color: #fbb;
+}
+
+.calendar table .wn {
+  padding: 2px 2px 2px 2px;
+  border-right: 1px solid #000;
+  background: #666;
+}
+
+.calendar tbody .rowhilite td {
+  background: #FFF1AF;
+}
+
+.calendar tbody .rowhilite td.wn {
+  background: #FFF1AF;
+}
+
+.calendar tbody td.hilite {
+  padding: 1px 1px 1px 1px;
+  background: #444 !important;
+  color: #fff !important;
+}
+
+.calendar tbody td.active {
+  color: #fff;
+  background: #529214 !important;
+  padding: 2px 2px 0px 2px;
+}
+
+.calendar tbody td.selected {
+  font-weight: bold;
+  border: 1px solid #888;
+  padding: 1px 1px 1px 1px;
+  background: #f5f5f5 !important;
+  color: #222 !important;
+}
+
+.calendar tbody td.weekend {
+  color: #666;
+}
+
+.calendar tbody td.today {
+  font-weight: bold;
+  color: #529214;
+  background: #D9EFC2;
+}
+
+.calendar tbody .disabled {
+  color: #999;
+}
+
+.calendar tbody .emptycell {
+  visibility: hidden;
+}
+
+.calendar tbody .emptyrow {
+  display: none;
+}
+
+.calendar tfoot .footrow {
+  text-align: center;
+  background: #556;
+  color: #fff;
+}
+
+.calendar tfoot .ttip {
+  background: #222;
+  color: #fff;
+  font-size: 10px;
+  border-top: 1px solid #dedede;
+  padding: 3px;
+}
+
+.calendar tfoot .hilite {
+  background: #aaf;
+  border: 1px solid #04f;
+  color: #000;
+  padding: 1px;
+}
+
+.calendar tfoot .active {
+  background: #77c;
+  padding: 2px 0px 0px 2px;
+}
+
+.calendar .combo {
+  position: absolute;
+  display: none;
+  top: 0px;
+  left: 0px;
+  width: 4em;
+  border: 1px solid #ccc;
+  background: #f5f5f5;
+  color: #222;
+  font-size: 90%;
+  z-index: 100;
+}
+
+.calendar .combo .label, .calendar .combo .label-IEfix {
+  text-align: center;
+  padding: 1px;
+}
+
+.calendar .combo .label-IEfix {
+  width: 4em;
+}
+
+.calendar .combo .hilite {
+  background: #444;
+  color: #fff;
+}
+
+.calendar .combo .active {
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+  background: #dedede;
+  font-weight: bold;
+}
