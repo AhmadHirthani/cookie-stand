@@ -34,7 +34,7 @@ function Branch(branchName, minCust, maxCust, avgCookSale) {
 }
 
 //Branch prototype
-Branch.prototype.renderFn = function () {   
+Branch.prototype.renderFn = function () {
     var tr = document.createElement('tr');
     var objectTable = document.getElementById('slaesTable');
     objectTable.appendChild(tr);
