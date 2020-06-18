@@ -16,6 +16,9 @@
         <nav>
             <ul>
                 <li>
+                    <img id="logo" src="assets\chinook.jpg" alt="">
+                </li>
+                <li>
                     <h1>Pat’s Salmon Cookies</h1>
                 </li>
                 <li>
@@ -35,15 +38,17 @@
         <form class="form" method="" action="">
             <fieldset>
                 <label class="description" for="branchName">Branch Name </label>
-                <input id="branchName" name="branchName" class="element text medium" type="text" maxlength="255"
-                    value="" />
+                <input id="branchName" name="branchName" class="element text" type="text" maxlength="255" required/>
+
                 <label class="description" for="minCust">Minimum Customer Per Hour </label>
-                <input id="minCust" name="minCust" class="element text medium" type="text" maxlength="255" value="" />
+                <input id="minCust" name="minCust" class="element text" type="number" maxlength="255" required/>
+
                 <label class="description" for="maxCust">Maximum Customer Per Hour </label>
-                <input id="maxCust" name="maxCust" class="element text medium" type="text" maxlength="255" value="" />
+                <input id="maxCust" name="maxCust" class="element text" type="number" maxlength="255" required/>
+
                 <label class="description" for="avgCookSale">Coustomer's Average </label>
-                <input id="avgCookSale" name="avgCookSale" class="element text medium" type="text" maxlength="255"
-                    value="" />
+                <input id="avgCookSale" name="avgCookSale" class="element text" type="number" maxlength="255" required/>
+
                 <input type="hidden" name="form_id" value="114728" />
             </fieldset>
             <input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />

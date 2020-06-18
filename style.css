@@ -1,3 +1,23 @@
+#logo {
+  position: absolute;
+  top: -38px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+input:invalid {
+  border: 2px dashed red;
+}
+
+input:invalid:required {
+  background-image: linear-gradient(to right, pink, lightgreen);
+}
+
+input:valid {
+  border: 2px solid black;
+}
+
 body {
   width: 100%;
   background-image: url("assets/family.jpg");
@@ -18,9 +38,27 @@ nav {
   background-color: blueviolet;
 }
 
+ul {
+  display: flex;
+  align-items: stretch;
+  /* Default */
+  justify-content: space-between;
+  width: 100%;
+}
+
+li {
+  display: inline-block;
+  margin: 0px 10px;
+  font-size: x-large;
+  font-weight: bold;
+  height: 35px;
+  text-align: center;
+  flex: 0 1 auto;
+}
+
 main {
   position: relative;
-  top: 100px;
+  top: 50px;
   left: 0px;
   height: 1000px;
   width: 100%;
@@ -28,21 +66,21 @@ main {
 
 form {
   background-color: #730d3d;
-  width: 30%;
+  width: 35%;
   position: relative;
   top: 100px;
   left: 33%;
   font-size: larger;
   border-radius: 10px;
-  
+  height: 275px;
+  padding: 10px 0px 10px 20px;
 }
-fieldset{
+
+fieldset {
   border: 0px;
 }
 
-
 table {
-
   letter-spacing: 0.05em;
   position: relative;
   top: 10px;
@@ -51,15 +89,8 @@ table {
   font-size: 120%;
 }
 
-
 #footerPara {
-  background-color: darksalmon;
-  position: fixed;
-  bottom: -16px;
-  left: 0;
-  width: 100%;
-  height: 15px;
-  padding: 10px;
+
 }
 
 tr {
@@ -108,15 +139,6 @@ li h2 {
   width: 20px;
 }
 
-li {
-  display: inline-block;
-  margin: 0px 10px;
-  font-size: x-large;
-  font-weight: bold;
-  height: 35px;
-  text-align: center;
-}
-
 h1 {
   text-align: center;
   font-weight: bolder;
@@ -136,6 +158,13 @@ footer p {
   color: black;
   font-weight: bold;
   text-align: center;
+  background-color: rgba(233, 150, 122, 0.8);
+  position: fixed;
+  bottom: -16px;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  padding: 10px;
 }
 
 /**** Buttons ****/
@@ -147,12 +176,9 @@ input.button_text {
   position: relative;
   left: 42%;
   font-size: 20px;
-
   color: white;
   background-color: #faab3c;
 }
-
-
 
 /**** Inputs and Labels ****/
 
@@ -165,8 +191,6 @@ label.description {
   line-height: 150%;
   padding: 0 0 1px;
 }
-
-
 
 form li.highlighted {
   background-color: #fff7c0;
