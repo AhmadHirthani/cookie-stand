@@ -92,11 +92,11 @@ document.getElementById("saveForm").addEventListener("click", function (event) {
     event.preventDefault();
     branchName = document.getElementById("branchName").value;
     var mincust = document.getElementById("minCust").value;
-    minCust = parseInt(mincust);
+    minCust = Number(mincust);
     var maxcust = document.getElementById("maxCust").value;
-    maxCust = parseInt(maxcust);
+    maxCust = Number(maxcust);
     var avgcooksale = document.getElementById("avgCookSale").value;
-    avgCookSale = parseInt(avgcooksale);
+    avgCookSale = Number(avgcooksale);
 
     newBranch = new Branch(branchName, minCust, maxCust, avgCookSale);
     newBranch.renderFn();

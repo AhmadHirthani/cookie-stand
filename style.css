@@ -1,6 +1,12 @@
+#tableSection{
+  position: relative;
+  top: 1450px;
+  left: 0px;
+  height: 200px;
+}
 #logo {
   position: absolute;
-  top: -38px;
+  top: -42px;
   left: 10px;
   width: 50px;
   height: 50px;
@@ -32,6 +38,7 @@ nav {
   top: 0;
   height: 60px;
   width: 100%;
+
   border-bottom: 4px solid #ffffff;
   border-color: darkorange;
   opacity: 0.7;
@@ -39,19 +46,18 @@ nav {
 }
 
 ul {
-  display: flex;
-  align-items: stretch;
+  display: inline-flex;
   /* Default */
   justify-content: space-between;
-  width: 100%;
+  width: 80%;
 }
 
 li {
   display: inline-block;
-  margin: 0px 10px;
+  /* margin: 0px 10px; */
   font-size: x-large;
   font-weight: bold;
-  height: 35px;
+  height: 30px;
   text-align: center;
   flex: 0 1 auto;
 }
@@ -84,7 +90,7 @@ table {
   letter-spacing: 0.05em;
   position: relative;
   top: 10px;
-  left: 1%;
+  left: 10%;
   text-align: center;
   font-size: 120%;
 }
@@ -120,13 +126,13 @@ td {
 }
 
 img {
-  border-radius: 30px;
+  border-radius: 35px;
   border-style: solid;
   border-color: darkgoldenrod;
   float: left;
-  width: 300px;
-  height: 300px;
-  margin: 40px;
+  width: 350px;
+  height: 350px;
+  margin: 45px;
 }
 
 a {
