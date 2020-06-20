@@ -43,17 +43,13 @@ ul {
   align-items: stretch;
   /* Default */
   justify-content: space-between;
-  width: 100%;
+  width: 80%;
 }
 
 li {
   display: inline-block;
   margin: 0px 10px;
   font-size: x-large;
-  font-weight: bold;
-  height: 35px;
-  text-align: center;
-  flex: 0 1 auto;
 }
 
 main {
@@ -84,14 +80,12 @@ table {
   letter-spacing: 0.05em;
   position: relative;
   top: 10px;
-  left: 1%;
+  left: 9%;
   text-align: center;
   font-size: 120%;
 }
 
-#footerPara {
-
-}
+#footerPara {}
 
 tr {
   background-color: #0cb0f1;
@@ -113,33 +107,49 @@ td {
 }
 
 #imageSection {
+  margin: auto;
   padding-top: 100px;
   padding-left: 5%;
   float: left;
   align-items: center;
 }
 
+#tableSection{
+  height: 1200px;
+  padding-top: 100px;
+  padding-left: 5%;
+  float: none;
+  align-items: center;
+  margin: auto;
+
+}
+
 img {
-  border-radius: 30px;
+  border-radius: 35px;
   border-style: solid;
   border-color: darkgoldenrod;
   float: left;
-  width: 300px;
-  height: 300px;
-  margin: 40px;
+  width: 350px;
+  height: 350px;
+  margin: 45px;
 }
 
 a {
   color: rgb(0, 0, 0);
   font-style: normal;
   font-weight: bold;
+font-family: 'Staatliches', cursive;
 }
 
 li h2 {
+
   width: 20px;
 }
 
 h1 {
+  font-family: 'Bitter', serif;
+
+  
   text-align: center;
   font-weight: bolder;
   color: rgb(255, 0, 0);
@@ -148,6 +158,8 @@ h1 {
 }
 
 h2 {
+
+font-family: 'Piedra', cursive;
   text-align: center;
   color: rgb(255, 0, 0);
   padding: 0mm;
@@ -165,6 +177,8 @@ footer p {
   width: 100%;
   height: 15px;
   padding: 10px;
+  font-family: 'Josefin Sans', sans-serif;
+ 
 }
 
 /**** Buttons ****/
@@ -183,6 +197,8 @@ input.button_text {
 /**** Inputs and Labels ****/
 
 label.description {
+  font-family: 'Josefin Sans', sans-serif;
+
   border: none;
   color: white;
   display: block;
